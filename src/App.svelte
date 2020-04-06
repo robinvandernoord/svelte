@@ -1,9 +1,13 @@
 <script>
 	let name = 'World';
+	$: yesyesyes = `hallo? ${name}`;
+	let test = 3;
+	$: test2 = test + 1
 
 
 	function askname(){
 		name = prompt('he gozer hoe heet jij dan?') || name;
+		test++
 	}
 </script>
 
@@ -12,6 +16,8 @@
 	<p>This is a test if auto-deploy is working!</p>
 
 	<button on:click={askname}>Zo heet ik niet!</button>
+
+	<b>{yesyesyes}, {test}, {test2}</b>
 	
 
 </main>
