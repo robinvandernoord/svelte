@@ -1,10 +1,19 @@
 <script>
-	export let name;
+	let name = 'World';
+
+
+	function askname(){
+		name = prompt('he gozer hoe heet jij dan?') || name;
+	}
 </script>
 
 <main>
 	<h1>Hello {name}, how are you today?</h1>
 	<p>This is a test if auto-deploy is working!</p>
+
+	<button on:click={askname}>Zo heet ik niet!</button>
+	
+
 </main>
 
 <style>
